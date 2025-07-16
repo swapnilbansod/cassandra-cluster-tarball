@@ -1,0 +1,16 @@
+cluster_name: '<give_cluster_name>'
+
+# Node specific
+listen_address: <Node_IP>
+broadcast_address: <Node_IP>
+rpc_address: 0.0.0.0
+broadcast_rpc_address: <Node_IP>
+
+# Same for all nodes
+seed_provider:
+    - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+          - seeds: "IP for seed,"
+
+num_tokens: 256
+endpoint_snitch: GossipingPropertyFileSnitch
