@@ -1,0 +1,13 @@
+[Unit]
+Description=Apache Cassandra
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/opt/cassandra/bin/cassandra -R
+ExecStop=/opt/cassandra/bin/nodetool stopdaemon
+User=cassandra
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
