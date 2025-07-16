@@ -46,5 +46,6 @@ Run this on each node:
 cd scripts
 bash install_cassandra.sh
 
-## Written by 
-        -SwapBan
+---
+
+## By SwapBan
